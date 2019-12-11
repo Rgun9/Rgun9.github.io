@@ -16,3 +16,5 @@
         [简介][3]*比较图*
 
          ![compare](https://rgun9.github.io/img/compare.png)
+
+         <div style='background:red'></div>
