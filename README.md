@@ -9,7 +9,12 @@
          >[简介][2] 面向手机端的打飞机小游戏,使用到了原生JS的大部分技术。
         *技术特点*：*DOM操作*
 
-        >![plan](https://rgun9.github.io/img/plan.png)
+        >>![plan](https://rgun9.github.io/img/plan.png)
+
+        [5]: https://rgun9.github.io/eatboll "吃球大作战"
+        >[简介][5]一款仿市面火爆的小游戏,主要是使用了ES6与canvas  *技术特点*：*canvas、ES6*
+
+        >>![compare](https://rgun9.github.io/img/boll.png) 
 
     + ## JQuery
         [3]: https://rgun9.github.io/compare "比较图"
@@ -21,5 +26,5 @@
          >[简介][4]*无缝轮播图*
 
          >>![compare](https://rgun9.github.io/img/banner.png) 
-         <img src=“https://rgun9.github.io/img/banner.png” alt="">
+
        
