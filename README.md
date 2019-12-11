@@ -20,5 +20,6 @@
          [4]: https://rgun9.github.io/banner "轮播图"
          >[简介][4]*无缝轮播图*
 
-         >>![compare](https://rgun9.github.io/img/banner.png) <img src=“https://rgun9.github.io/img/banner.png”>
+         >>![compare](https://rgun9.github.io/img/banner.png) 
+         <img src=“https://rgun9.github.io/img/banner.png” alt="">
        
