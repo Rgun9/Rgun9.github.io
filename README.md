@@ -1,6 +1,6 @@
 + # 项目展示
     + > ## HTML+CSS+JS
-        >>[简介]: https://rgun9.github.io/farming "种地项目"
+        [简介]: https://rgun9.github.io/farming "种地项目"
          [简介] 大学初学时所搭建的小型网站,这个项目是该阶段的技术掌握。
 
          ![farming](https://rgun9.github.io/img/farming.png)
