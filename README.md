@@ -16,4 +16,4 @@
         [简介]: https://rgun9.github.io/compare "比较图"
         [简介]*比较图*
 
-          ![compare](https://rgun9.github.io/img/compare.png)
+         ![compare](https://rgun9.github.io/img/compare.png)
