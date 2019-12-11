@@ -5,7 +5,9 @@
 
          ![farming](https://rgun9.github.io/img/farming.png)
     + > ## JavaScript
-         >>[小游戏]: https://rgun9.github.io/plan "打飞机游戏"    
-          [小游戏] 面向手机端的打飞机小游戏,使用到了原生JS的大部分技术。  *技术特点*：*DOM操作*
+         >>[小游戏]: https://rgun9.github.io/plan "打飞机游戏"
+             
+          [小游戏] 面向手机端的打飞机小游戏,使用到了原生JS的大部分技术。  
+          *技术特点*：*DOM操作*
 
          ![farming](https://rgun9.github.io/img/plan.png)
