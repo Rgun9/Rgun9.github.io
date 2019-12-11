@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="start_game">
+            <button class="sg">开始游戏</button>
+        </div>
+        <div class="game">
+            <span class="ct">总分: <span class="df">0</span> </span>
+
+            <div class="menu">
+                <div class="buy">续关</div>
+                <div class="ag">重新开始</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var sg = document.querySelector(".start_game")
+        var bsg = document.querySelector('.sg')
+        var game = document.querySelector('.game')
+        var ct = document.querySelector('.ct')
+        var df = document.querySelector('.df')
+        var menu = document.querySelector('.menu')
+        var ag = document.querySelector('.ag')
+        var buy = document.querySelector('.buy')
+        var dfs = Number(df.innerText)
+        var cont = 0
+        bsg.addEventListener("click", function () {
+            sg.style.left = -100 + "%"
+            game.style.left = 0
+            ourplane.creatr()
+            ourplane.move()
+            Gameconfig.start()
+            Gameconfig.move()
+        })
+        ag.addEventListener("click", function () {
+            location.reload();
+        })
+        buy.addEventListener("click", function () {
+            ourplane.hp += 5
+        })
+
+        game.ontouchstart = function (e) {
+            game.ontouchend = function (s) {
+                if (e.changedTouches[0].clientX == s.changedTouches[0].clientX) {
+                    Gameconfig.stop()
+                }
+            }
+        }
+
+
+        var Gameconfig = {
+            state: 0,
+            gettimeID: 1,
+            start: function () {
+                Gameconfig.gettimeID = setInterval(function () {
+                    cont++
+                    if (cont % ourplane.thick == 0) {
+                        ourplane.crblt()
+                    }
+                    ourplane.check()
+                    if (cont % 50 == 0) {
+                        ememyplane.create_s()
+                    }
+                    if (cont % 100 == 0) {
+                        ememyplane.create_m()
+                    }
+                    if (cont % 150 == 0) {
+                        ememyplane.create_l()
+                    }
+
+                    // console.log(ourplane.dfg);
+
+                    if (ourplane.dfg >= 50) {
+                        // console.log(ourplane.tybullte.s);
+
+                        ourplane.sbuff()
+                        ourplane.dfg = 0
+                    }
+                    if (ourplane.dft >= 50) {
+                        // console.log(ourplane.thick);
+
+                        ourplane.thickbuff()
+                        // console.log(ourplane.thick);
+                        ourplane.dft = 0
+                    }
+                    ememyplane.check()
+                    ourplane.hit()
+                    if (ememyplane.ck == 0) {
+                        ourplane.node.src = ourplane.boom
+                        // console.log(ememyplane.ck );        
+                        ememyplane.ck = 2
+                        setTimeout(function () {
+                            ourplane.node.src = ourplane.path
+                        }, 3000)
+                    } else if (ememyplane.ck == 2) {
+                        setTimeout(function () {
+                            ememyplane.ck = 1
+                        }, 3000)
+                    } else {
+                        ememyplane.hitP()
+                    }
+
+
+                }, 60)
+            },
+            move: function () {
+                game.ontouchmove = function (e) {
+                    if (e.touches[0].clientX > 0 + ourplane.w / 2 && e.touches[0].clientX < innerWidth -
+                        ourplane
+                        .w / 2) {
+                        ourplane.x = e.touches[0].clientX
+                        ourplane.y = e.touches[0].clientY - ourplane.h / 2
+                        ourplane.move()
+                    }
+                }
+            },
+
+            stop: function () {
+                if (this.state == 0) {
+                    menu.style.top = 50 + "%"
+                    clearInterval(this.gettimeID)
+                    game.ontouchmove = null;
+                    this.state = 1
+                } else {
+                    menu.style.top = -50 + "%"
+                    this.state = 0
+                    Gameconfig.start()
+                    Gameconfig.move()
+                }
+
+            }
+
+        }
+        var tyourplane = {
+            path: "./images/our-plane.gif",
+            w: 66,
+            h: 80,
+            thick: 8,
+            bulltes: [],
+            dfg: 0,
+            dft: 0,
+            hp: 3,
+            boom: "./images/our-plane-boom.gif",
+            tybullte: {
+                path: './images/our-bullet.png',
+                w: 6,
+                h: 14,
+                s: -10
+            }
+        }
+        var enemyplanes = {
+            plane_s: {
+                path: "./images/enemy-plane-s.png",
+                w: 34,
+                h: 24,
+                s: 8,
+                hp: 1,
+                ShotIn: "./images/enemy-plane-s-boom.gif",
+                boom: "./images/enemy-plane-s-boom.gif",
+                type: "s",
+                btime: 100
+            },
+            plane_m: {
+                path: "./images/enemy-plane-m.png",
+                w: 46,
+                h: 60,
+                s: 4,
+                hp: 5,
+                ShotIn: "./images/enemy-plane-m-hit.png",
+                boom: "./images/enemy-plane-m-boom.gif",
+                type: "m",
+                btime: 700,
+            },
+            plane_l: {
+                path: "./images/enemy-plane-l.png",
+                w: 110,
+                h: 164,
+                s: 2,
+                hp: 15,
+                ShotIn: "./images/enemy-plane-l-hit.png",
+                boom: "./images/enemy-plane-l-boom.gif",
+                type: "l",
+                btime: 1500,
+            },
+            num: [],
+            ck: 1,
+        }
+
+        function opf(our, x, y) {
+            this.path = our.path
+            this.w = our.w
+            this.h = our.h
+            this.x = x
+            this.y = y
+            this.speed = our.s
+            this.bulltes = our.bulltes
+            this.tybullte = our.tybullte
+            this.thick = our.thick
+            this.dfg = our.dfg
+            this.dft = our.dft
+            this.hp = our.hp
+            this.boom = our.boom
+        }
+
+        function epf(eme, x, y) {
+            this.path = eme.path
+
+            this.w = eme.w
+
+            this.h = eme.h
+
+            this.x = x
+            this.y = y
+
+            this.speed = eme.s
+
+            this.num = eme.num
+
+            this.hp = eme.hp
+
+            this.hit = eme.ShotIn
+
+            this.boom = eme.boom
+            this.type = eme.type
+            this.btime = eme.btime
+            this.ck = eme.ck
+        }
+
+
+        epf.prototype.creatr = function () {
+            this.node = document.createElement("img")
+            this.node.src = this.path
+            game.appendChild(this.node)
+            this.move()
+        }
+        epf.prototype.move = function () {
+            this.node.style.left = Math.floor(Math.random() * (innerWidth - this.w)) + "px"
+
+            this.node.style.top = this.y + "px"
+        }
+        epf.prototype.attack = function () {
+            this.y += this.speed
+            this.node.style.top = this.y + "px"
+        }
+        epf.prototype.create_s = function () {
+            var ene_s = new epf(enemyplanes.plane_s, 0 + enemyplanes.plane_s.w / 2, 0 - enemyplanes.plane_s.h)
+            ene_s.creatr()
+            this.num.push(ene_s)
+
+
+        }
+        epf.prototype.create_m = function () {
+            var ene_m = new epf(enemyplanes.plane_m, 0 + enemyplanes.plane_m.w / 2, 0 - enemyplanes.plane_m.h)
+            ene_m.creatr()
+            this.num.push(ene_m)
+        }
+        epf.prototype.create_l = function () {
+            var ene_l = new epf(enemyplanes.plane_l, 0 + enemyplanes.plane_l.w / 2, 0 - enemyplanes.plane_l.h)
+
+            ene_l.creatr()
+
+            this.num.push(ene_l)
+
+        }
+        epf.prototype.check = function () {
+            this.num.forEach(function (e, i, arr) {
+                e.attack()
+                if (e.y > innerHeight) {
+                    // console.log(e.node);
+                    game.removeChild(e.node)
+                    arr.splice(i, 1)
+                }
+            })
+        }
+        epf.prototype.inhit = function (eme, emeX) {
+            emeX = emeX + 2
+            eme.node.style.transition = "0.3s all"
+            eme.node.style.left = emeX + 1 + "px"
+            setTimeout(function () {
+                eme.node.style.left = emeX - 2 + "px"
+            }, 200)
+        }
+        epf.prototype.hitP = function () {
+            var opX = Math.round(ourplane.x)
+            var opY = Math.round(ourplane.y)
+            ememyplane.num.forEach(function (eme, index, arr) {
+                var emeX = eme.node.offsetLeft
+                var emeY = eme.node.offsetTop
+                if (opX >= emeX && opX <= emeX + eme.x * 2 && opY <= emeY + eme.h) {
+                    console.log(ourplane.hp);
+                    eme.hp--
+                    if (eme.hp <= 0) {
+                        eme.node.src = eme.boom
+                    }
+                    if (eme.hp == 0) {
+                        // console.log(eme.type);
+                        if (eme.type == 's') {
+                            dfs++
+                            ourplane.dfg++
+                            ourplane.dft++
+                            df.innerText = dfs
+                        }
+                        if (eme.type == 'm') {
+                            dfs += 5
+                            ourplane.dfg += 5
+                            ourplane.dft += 5
+                            df.innerText = dfs
+                        }
+                        if (eme.type == 'l') {
+                            dfs += 15
+                            ourplane.dfg += 15
+                            ourplane.dft += 15
+                            df.innerText = dfs
+                        }
+                        setTimeout(function () {
+                            eme.y = innerHeight
+                        }, eme.btime)
+
+                    }
+                    if (ourplane.hp > 0) {
+                        if (ourplane.hp--) {
+                            ememyplane.ck = 0
+                        }
+                    } else {
+                        Gameconfig.state = 0
+                        Gameconfig.stop()
+                    }
+                    console.log(ourplane.hp);
+                }
+            })
+
+
+        }
+
+        opf.prototype.creatr = function () {
+            this.node = document.createElement('img')
+            this.node.src = this.path
+            game.appendChild(this.node)
+            this.move()
+        }
+        opf.prototype.move = function () {
+            this.node.style.left = this.x - this.w / 2 + "px"
+            this.node.style.top = this.y + "px"
+        }
+        opf.prototype.fire = function () {
+            this.y += this.speed
+            // console.log(this.y);
+            this.move()
+        }
+        opf.prototype.crblt = function () {
+            var bullte = new opf(this.tybullte, ourplane.x, ourplane.y)
+            bullte.creatr()
+            bullte.node.style.transition = "0.1s all"
+            this.bulltes.push(bullte)
+        }
+        opf.prototype.check = function () {
+
+            this.bulltes.forEach(function (e, i, arr) {
+                e.fire()
+                if (e.y < -e.h / 2) {
+                    game.removeChild(e.node)
+                    arr.splice(i, 1)
+                }
+            })
+        }
+        opf.prototype.hit = function () {
+            this.bulltes.forEach(function (our, i, a) {
+                var ourY = Math.round(our.y)
+                var ourX = Math.round(our.x)
+                ememyplane.num.forEach(function (eme, index, arr) {
+                    // console.log(eme);         
+                    var emeX = eme.node.offsetLeft
+                    var emeY = eme.node.offsetTop
+                    // console.log(emeX);
+
+                    if (ourX >= emeX && ourX <= emeX + eme.x * 2 && ourY <= emeY + eme.h) {
+                        eme.node.src = eme.hit
+                        eme.hp--
+                        our.y = -20
+                        eme.inhit(eme, emeX)
+                        if (eme.hp <= 0) {
+                            eme.node.src = eme.boom
+                        }
+                        if (eme.hp == 0) {
+                            // console.log(eme.type);
+                            if (eme.type == 's') {
+                                dfs++
+                                ourplane.dfg++
+                                ourplane.dft++
+                                df.innerText = dfs
+                            }
+                            if (eme.type == 'm') {
+                                dfs += 5
+                                ourplane.dfg += 5
+                                ourplane.dft += 5
+                                df.innerText = dfs
+                            }
+                            if (eme.type == 'l') {
+                                dfs += 15
+                                ourplane.dfg += 15
+                                ourplane.dft += 15
+                                df.innerText = dfs
+                            }
+                            setTimeout(function () {
+                                eme.y = innerHeight
+                            }, eme.btime)
+                        }
+                    }
+
+                })
+            })
+        }
+        opf.prototype.sbuff = function () {
+            this.tybullte.s += -2
+        }
+        opf.prototype.mbbuff = function () {
+            this.tybullte.creatr()
+            this.node.style.left = (this.x - this.w / 2) - this.w / 4 + "px"
+            this.node.style.top = this.y + "px"
+
+            this.tybullte.creatr()
+            this.node.style.left = (this.x - this.w / 2) + this.w / 4 + "px"
+            this.node.style.top = this.y + "px"
+        }
+        opf.prototype.thickbuff = function () {
+            if (this.thick !== 1) {
+                this.thick--
+            }
+        }
+        var ourplane = new opf(tyourplane, innerWidth / 2, innerHeight / 1.5)
+        var ememyplane = new epf(enemyplanes)
+    </script>
+</body>
+
+</html>
