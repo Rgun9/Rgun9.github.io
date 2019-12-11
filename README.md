@@ -9,5 +9,11 @@
          [简介]: https://rgun9.github.io/plan "面向手机端的打飞机小游戏"
          [简介] 面向手机端的打飞机小游戏,使用到了原生JS的大部分技术。
         *技术特点*：*DOM操作*
-        
+
         ![farming](https://rgun9.github.io/img/plan.png)
+
+    + ## JQuery
+        [简介]:https://rgun9.github.io/jq/compare "比较图"
+        [简介]*比较图*
+
+          ![farming](https://rgun9.github.io/img/compare.png)
