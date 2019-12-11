@@ -13,7 +13,7 @@
         ![farming](https://rgun9.github.io/img/plan.png)
 
     + ## JQuery
-        [简介]:https://rgun9.github.io/jq/compare "比较图"
+        [简介]:https://rgun9.github.io/compare "比较图"
         [简介]*比较图*
 
           ![farming](https://rgun9.github.io/img/compare.png)
