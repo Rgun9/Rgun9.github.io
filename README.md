@@ -13,8 +13,11 @@
 
     + ## JQuery
         [3]: https://rgun9.github.io/compare "比较图"
-        [简介][3]*比较图*
+        >[简介][3]*比较图*
 
-         ![compare](https://rgun9.github.io/img/compare.png)
+         >>![compare](https://rgun9.github.io/img/compare.png)
 
-         <div style='background:red'></div>
+         [4]: https://rgun9.github.io/banner "轮播图"
+         >[简介][4]*无缝轮播图*
+
+         >>![compare](https://rgun9.github.io/img/banner.png)

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>无缝轮播</title>
+    <link rel="stylesheet" href="./css/lunbo.css">
+</head>
+
+<body>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <div class="box">
+        <ul class="imglist">
+            <li>
+                <div class="imgbox"><img src="./img/bd1.jpg" alt=""></div>
+            </li>
+            <li>
+                <div class="imgbox"><img src="./img/bd2.jpg" alt=""></div>
+            </li>
+            <li>
+                <div class="imgbox"><img src="./img/bd3.jpg" alt=""></div>
+            </li>
+        </ul>
+        <div class="icon"></div>
+        <div class="next"><img src="./img/nexImg.png" alt=""></div>
+        <div class="pevr"><img src="./img/preImg.png" alt=""></div>
+    </div>
+
+    <script>
+        var lis = $(".imglist")
+        var splis = $('.icon')
+        var next = $('.next')
+        var pevr = $('.pevr')
+        var arr = []
+        var cont = 0
+
+        lis.children().each(function (i, e) {
+            splis.append("<span></span>")
+            //   e.style.left=i*100+"%"
+        })
+        splis.children().click(function () {
+            cont = $(this).index()
+        })
+
+        var sid = setInterval(function () {
+            gonext()
+        }, 2000)
+
+        lis.mouseleave(function () {
+            sid = setInterval(function () {
+                gonext()
+            }, 1500)
+        })
+        lis.mouseenter(function () {
+            clearInterval(sid)
+        })
+
+        function gonext() {
+            next.css('pointer-events', 'none')
+            lis.children().eq(0).css({
+                "left": -100 + "%"
+            }).next().css({
+                "left": 0,
+                'transition': '0.3s all ',
+            })
+            lis.children().css("width", 100 + "%")
+            setTimeout(function () {
+                lis.append(lis.children()[0])
+                next.css('pointer-events', 'auto')
+            }, 300)
+            lis.children().eq(2).css({
+                'left': 100 + '%',
+                'transition': 'none'
+            })
+            cont++
+            if (cont > lis.children().length - 1) {
+                cont = 0
+            }
+            splis.children().eq(cont).css("background", "#fff").siblings().css("background", "#000")
+        }
+        splis.children().eq(cont).css("background", "#fff").siblings().css("background", "#000")
+        next.click(function () {
+            clearInterval(sid)
+            gonext()
+        })
+        pevr.click(function () {
+            // debugger
+            clearInterval(sid)
+            lis.children().eq(0).css({
+                'transition': '0.3s all',
+                "left": 100 + "%"
+            })
+
+            // lis.children().eq(2).css({
+            //     "left": -100 + '%',
+            //     'transition': 'none',
+            // })
+            lis.children().eq(2).css({
+                'transition': '0.3s all',
+                "left": 0
+            })
+
+            lis.children().css("width", 100 + "%")
+            setTimeout(function () {
+                lis.children().eq(1).css({
+                    'transition': 'none',
+                    'left': -100 + "%"
+                })
+                lis.prepend(lis.children()[2])
+            }, 300)
+            // lis.children().eq(0).css({
+            //     'left': 100 + '%',
+            //     // 'transition': 'none'
+            // })
+
+            cont--
+            if (cont < 0) {
+                cont = lis.children().length - 1
+            }
+            splis.children().eq(cont).css("background", "#fff").siblings().css("background", "#000")
+        })
+    </script>
+</body>
+
+</html>
