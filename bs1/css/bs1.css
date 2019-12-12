@@ -1,0 +1,560 @@
+* {
+  list-style: none;
+}
+html {
+  width: 100%;
+}
+body {
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.home {
+  width: 100%;
+  overflow: hidden;
+}
+header .logs {
+  font-family: "Srisakdi", cursive;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: -1px;
+  color: #fc427b !important;
+  text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+  padding: 0;
+  line-height: 1.2;
+}
+header .navbar-nav a {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+}
+header .navbar-nav a.act {
+  color: #fc427b;
+}
+section .banner {
+  height: 720px;
+  width: 100%;
+}
+section .banner ol li {
+  background: #fc427b;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  margin: 0;
+}
+section .banner ol li.active {
+  width: 16px;
+  height: 16px;
+}
+section .banner .carousel-inner {
+  height: 100%;
+  width: 100%;
+}
+section .banner .item {
+  width: 100%;
+  height: 100% !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+section .banner .i1 {
+  background: url("../img/bs/2.jpg");
+}
+section .banner .i2 {
+  background: url("../img/bs/1.jpg");
+}
+section .banner .i3 {
+  background: url("../img/bs/4.jpg");
+}
+section .banner h5 {
+  font-weight: 400;
+  color: #000;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+section .banner h3 {
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 4.5em;
+  text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+}
+section .banner .row {
+  margin-top: -350px;
+}
+section .banner a {
+  background: #fc427b;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 3rem;
+}
+section .welcome {
+  padding-top: 4rem;
+}
+section .welcome h3 {
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+}
+section .welcome h4 {
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  font-family: initial;
+  color: #464646;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+}
+section .welcome span {
+  font-size: 28px;
+  color: #fff;
+  border-radius: 50%;
+  background: #fc427b;
+  padding: 1em;
+}
+section .welcome h5 {
+  letter-spacing: 1px;
+  color: #343a40;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.25em;
+  font-weight: 500;
+  line-height: 1.2;
+}
+section .welcome p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.9;
+  color: #999;
+  font-family: "Sintony", sans-serif;
+}
+section .welcome img {
+  max-width: 100%;
+  height: auto;
+}
+section .box {
+  padding: 50px 0;
+  background: #fc427b;
+  color: #fff;
+}
+section .box h3 {
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+section .box .iconbox {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+section .box .glyphicon {
+  transform: scale(2);
+}
+section .blow {
+  padding: 6em 0;
+}
+section .blow p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.9;
+  color: #999;
+  font-family: "Sintony", sans-serif;
+}
+section .blow .title {
+  margin-bottom: 3em;
+}
+section .blow .title h3 {
+  margin-bottom: 0.5em;
+  font-size: 1.75em;
+}
+section .blow img {
+  width: 100%;
+}
+section .blow .posts-top {
+  position: relative;
+}
+section .blow .posts-top h3 {
+  font-size: 26px;
+  color: #fff;
+  position: absolute;
+  background: #38d2fe;
+  padding: 10px 25px;
+  bottom: 0;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 600;
+}
+section .blow .posts-top span {
+  display: block;
+  font-weight: 100;
+  font-size: 16px;
+}
+section .blow .posts-botm {
+  padding: 1.5em 0;
+}
+section .blow .posts-botm h4 {
+  font-size: 23px;
+  color: #343a40;
+  margin-bottom: 0.5em;
+}
+section .blow .posts-botm i {
+  color: #fc427b;
+}
+section .blow .posts-botm li {
+  float: left;
+}
+section .blow .posts-botm li:last-child {
+  margin-left: 15px;
+}
+section .blow .posts-botm a {
+  color: #999;
+  letter-spacing: 1px;
+  font-size: 15px;
+  transition: 0.5s all;
+}
+section .blow .posts-botm .list {
+  overflow: hidden;
+}
+section .blow .posts-botm p {
+  margin-top: 2em;
+}
+section .bnrbtm {
+  padding: 4em 0;
+  max-height: 560px;
+  background: url("../img/bs/bg2.jpg") no-repeat top;
+  background-size: cover;
+}
+section .bnrbtm .row {
+  padding: 3em;
+}
+section .bnrbtm .row span {
+  font-size: 26px;
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+section .bnrbtm .row h3 {
+  font-weight: 800;
+  font-size: 32px;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+}
+section .bnrbtm .row p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.9;
+  color: #fff;
+  font-family: "Sintony", sans-serif;
+}
+section .gallery {
+  padding: 4em 0;
+}
+section .title h3 {
+  margin-bottom: 0.5em;
+  font-size: 1.75em;
+}
+section .title p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.9;
+  color: #999;
+  font-family: "Sintony", sans-serif;
+}
+section .row .gallerybox {
+  margin-top: 2em;
+}
+section .news {
+  padding: 4em;
+  background: url("../img/bs/bg3.jpg") no-repeat center;
+  background-size: cover;
+}
+section .news .content {
+  padding-bottom: 4em;
+}
+section .news .title {
+  margin-bottom: 4em;
+}
+section .news h3 {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: normal;
+  font-size: 32px;
+}
+section .news p {
+  color: #e0e0e0;
+  padding: 0;
+  margin: 0;
+}
+section .news input[type="text"] {
+  padding: 25px;
+  border: none;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+section .news input[type="submit"] {
+  background: #38d2fe;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 25px;
+  line-height: 0.5;
+  text-transform: uppercase;
+}
+section .address {
+  padding: 4em 0;
+}
+section .address .info {
+  padding: 40px;
+  box-shadow: 0 2px 13px -1px rgba(0, 0, 0, 0.15);
+}
+section .address .title {
+  margin-bottom: 4em;
+}
+section .address h4 {
+  font-size: 23px;
+  color: #38d2fe;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+section .address p,
+section .address a {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.9;
+  color: #999;
+  font-family: "Sintony", sans-serif;
+}
+section .address input[type="text"],
+section .address textarea {
+  color: #000;
+  background: none;
+  outline: none;
+  font-size: 15px;
+  padding: 22px;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  border: none;
+  box-shadow: none;
+  border-bottom: solid 1px #828282;
+  border-radius: 0;
+}
+section .address input[type="text"]:focus,
+section .address textarea:focus {
+  box-shadow: 0 0 0 0.2em rgba(0, 123, 255, 0.25);
+}
+section .address textarea {
+  min-height: 11.7em;
+}
+section .address input[type="submit"] {
+  padding: 12px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 1.7em;
+  width: 100%;
+  background: #fc427b;
+  transition: 0.5 all;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+section .footer {
+  padding: 4em 0;
+  background: #212020;
+  color: #fff;
+}
+section .footer h3 {
+  margin-bottom: 3em;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+section .footer h4 {
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 0.5em;
+  color: #f8f9fa;
+}
+section .footer p {
+  color: #ababab;
+  font-size: 14px;
+  line-height: 1.9;
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
+  font-family: "Sintony", sans-serif;
+}
+section .footer a {
+  color: #ababab;
+  padding: 0;
+  margin: 0;
+  line-height: 1.9;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+section .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 4em;
+}
+section .footer-bottom a {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  color: #fc427b;
+  text-decoration: none;
+}
+#myModal .modal-dialog {
+  width: 32vw;
+}
+#myModal .modal-content {
+  padding: 5px 10px;
+}
+#myModal .modal-content .moimgbox {
+  border-radius: 4px;
+  padding: 1.5vw 0.5vw;
+  text-align: center;
+}
+#myModal .modal-body {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+#myModal img {
+  width: 100%;
+  height: auto;
+}
+#myModal .prve {
+  position: absolute;
+  width: 50%;
+  height: 95%;
+  top: 5%;
+}
+#myModal .next {
+  position: absolute;
+  width: 50%;
+  height: 95%;
+  right: 0;
+  top: 5%;
+}
+@media (min-width: 320px) {
+  header .dropdown-menu li {
+    text-align: center;
+  }
+  .banner .carousel-inner div[class^="col"] {
+    margin-left: 0;
+    width: 100%;
+  }
+  .banner .carousel-inner h5 {
+    font-size: 14px;
+  }
+  .banner .carousel-inner h3 {
+    font-size: 2.8em;
+  }
+}
+@media (max-width: 320px) {
+  header .dropdown-menu li {
+    text-align: center;
+  }
+  .banner .carousel-inner div[class^="col"] {
+    margin-left: 0;
+  }
+}
+@media (min-width: 568px) {
+  header .dropdown-menu li {
+    text-align: center;
+  }
+  .banner .carousel-inner .carousel-caption {
+    left: 0;
+    right: 0;
+  }
+  .banner .carousel-inner .row {
+    width: 100%;
+  }
+  .banner .carousel-inner h5 {
+    font-size: 18px;
+  }
+  .banner .carousel-inner h3 {
+    font-size: 3.3em;
+  }
+}
+@media (min-width: 768px) {
+  header .dropdown-menu li {
+    text-align: left;
+  }
+  .banner .carousel-inner .carousel-caption {
+    left: 0;
+    right: 0;
+  }
+  .banner .carousel-inner .row {
+    width: 100%;
+  }
+  .banner .carousel-inner h5 {
+    font-size: 19px;
+  }
+  .banner .carousel-inner h3 {
+    font-size: 3.5em;
+  }
+}
+@media (min-width: 1080px) {
+  header .dropdown-menu {
+    background: #212529;
+  }
+  header .dropdown-menu li {
+    text-align: left;
+  }
+  header .dropdown-menu a {
+    color: #fff;
+  }
+  .banner .carousel-inner .carousel-caption {
+    left: 0;
+    right: 0;
+  }
+  .banner .carousel-inner .row {
+    width: 100%;
+  }
+  .banner .carousel-inner h3 {
+    font-size: 4em;
+  }
+  .banner .carousel-inner h5 {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=./bs1.css.map */
