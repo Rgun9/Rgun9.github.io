@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #fff;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: rgba(0, 0, 0, 0.88);
+  width: 100%;
+  height: 100%;
+}
+.home {
+  width: 100%;
+  height: 100%;
+}
+.box {
+  margin: 200px auto;
+  position: relative;
+  width: 550px;
+}
+.box .main {
+  height: 180px;
+  padding: 25px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.box .main .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(20px);
+  opacity: 0.5;
+  z-index: -1;
+  background-size: 100% !important;
+}
+.box .main .play_cd {
+  float: left;
+  width: 130px;
+  height: 130px;
+  background: url("../img/cd.png") no-repeat center;
+  background-size: 100%;
+  position: relative;
+}
+.box .main .play_cd img {
+  width: 100%;
+  height: 100%;
+}
+.box .main .play_cd .play_img {
+  animation: anm 15s linear infinite;
+  animation-play-state: paused;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  background: #fff;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.box .main .play_cd .play_img.act {
+  animation: anm 15s linear infinite;
+}
+.box .main .play_cd .play_pt {
+  width: 25px;
+  position: absolute;
+  right: -10px;
+  top: 0;
+  transform-origin: right top;
+  transition: 0.3s all;
+  transform: rotate(-30deg);
+}
+.box .main .play_cd .play_pt.act {
+  transform-origin: right top;
+  transform: rotate(0);
+}
+.box .main .play_cd .play_pt img {
+  width: 100%;
+}
+.box .main .msg {
+  float: right;
+  width: 330px;
+  height: 130px;
+}
+.box .main .msg header {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 15px;
+}
+.box .main .msg header p {
+  color: #ccc;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.box .main .msg section {
+  width: 100%;
+}
+.box .main .msg section .content {
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+.box .main .msg section .content svg path {
+  fill: rgba(255, 255, 255, 0.5);
+}
+.box .main .msg section .control_btns {
+  float: left;
+  overflow: hidden;
+}
+.box .main .msg section .control_btns .play.pl svg:last-child {
+  display: block;
+}
+.box .main .msg section .control_btns .play.pl svg:first-child {
+  display: none;
+}
+.box .main .msg section .control_btns .play svg:last-child {
+  display: none;
+}
+.box .main .msg section .control_btns .play svg:first-child {
+  display: block;
+}
+.box .main .msg section .control_btns .loop.random svg:nth-child(1) {
+  display: none;
+}
+.box .main .msg section .control_btns .loop.random svg:nth-child(2) {
+  display: none;
+}
+.box .main .msg section .control_btns .loop.random svg:nth-child(3) {
+  display: block;
+}
+.box .main .msg section .control_btns .loop.single svg:nth-child(1) {
+  display: block;
+}
+.box .main .msg section .control_btns .loop.single svg:nth-child(2) {
+  display: none;
+}
+.box .main .msg section .control_btns .loop.single svg:nth-child(3) {
+  display: none;
+}
+.box .main .msg section .control_btns .loop.order svg:nth-child(1) {
+  display: none;
+}
+.box .main .msg section .control_btns .loop.order svg:nth-child(2) {
+  display: block;
+}
+.box .main .msg section .control_btns .loop.order svg:nth-child(3) {
+  display: none;
+}
+.box .main .msg section .control_btns .pl_btn {
+  float: left;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.box .main .msg section .control_btns .pl_btn:hover svg path {
+  fill: rgba(255, 255, 255, 0.897);
+}
+.box .main .msg section .volume {
+  float: right;
+  overflow: hidden;
+}
+.box .main .msg section .volume .pl_vo {
+  float: left;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.box .main .msg section .volume .pl_vo:hover svg path {
+  fill: rgba(255, 255, 255, 0.897);
+}
+.box .main .msg section .volume .progress {
+  background: rgba(0, 0, 0, 0.3);
+  height: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset;
+  overflow: hidden;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+  float: left;
+  width: 100px;
+  top: 8px;
+}
+.box .main .msg section .volume .progress .back {
+  height: 100%;
+  border-radius: 2px;
+  background: #0cb6d4;
+  width: 87px;
+}
+.box .main .msg section .volume .progress .pointer {
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  position: absolute;
+  transition: 0.3s all;
+  top: -1px;
+}
+.box .main .msg section .song_progress {
+  margin-top: 15px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  height: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset;
+  overflow: hidden;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.box .main .msg section .song_progress .back {
+  height: 100%;
+  border-radius: 2px;
+  background: #0cb6d4;
+  transition: 0.15s all linear;
+}
+.box .main .msg section .songtime {
+  font-size: 12px;
+  color: #fff;
+  margin-top: 5px;
+  padding: 0 3px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+.box .main .msg section .nowTime {
+  float: left;
+}
+.box .main .msg section .totalTime {
+  float: right;
+}
+@keyframes anm {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=./video.css.map */

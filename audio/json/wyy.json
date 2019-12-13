@@ -1,0 +1,30 @@
+{
+    "result": [{
+            "id": 1,
+            "title": "Answer Remix",
+            "singer": "Bahamut",
+            "songUrl": "./mp3/子言姐姐 - Answer Remix.mp3",
+            "imgUrl": "./img/wyy/1.jpg"
+        }, {
+            "id": 2,
+            "title": "檄!帝国華撃団",
+            "singer": "横山智佐",
+            "songUrl": "./mp3/横山智佐 - 檄!帝国華撃団.mp3",
+            "imgUrl": "./img/wyy/2.jpg"
+        },
+        {
+            "id": 3,
+            "title": "B.B.K.K.B.K.K.(hurce Remix)",
+            "singer": "nora2r",
+            "songUrl": "./mp3/nora2r - B.B.K.K.B.K.K. (hurce Remix).mp3",
+            "imgUrl": "./img/wyy/3.jpg"
+        },
+        {
+            "id": 4,
+            "title": "【哈迪斯】Tomorrow and Tomorrow Jazz cover",
+            "singer": "ff14",
+            "songUrl": "./mp3/子言姐姐 - 【哈迪斯】Tomorrow and Tomorrow Jazz cover.mp3",
+            "imgUrl": "./img/wyy/1.jpg"
+        }
+    ]
+}
