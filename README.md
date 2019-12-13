@@ -1,6 +1,4 @@
-*Welcome to my page !*
-       [1]:(https://rgun9.github.io/farming "种地项目")
-       
-       This my blog[here][1]
+*Welcome to my page !* 
+       This my blog<a href="https://rgun9.github.io/farming" target="_blank">here</a>
 
-        ![farming](https://rgun9.github.io/img/farming.png)
+        ![blog](https://rgun9.github.io/img/blog.png “blog”)
