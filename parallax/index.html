@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/movies.css">
+</head>
+
+<body>
+    <div class="stage">
+
+        <h3>Movies</h3>
+        <h1>Popular</h1>
+
+        <div class="items">
+            <div class="card">
+                <div class="card-bg">
+                </div>
+                <div class="hole"><img src="https://www.17sucai.com/preview/1424582/2018-11-08/kp/img/3dr_mono.png"
+                        alt=""></div>
+                <p>Princess Mononoke</p>
+
+            </div>
+            <div class="card">
+                <div class="card-bg bg2">
+                </div>
+                <div class="hole"><img src="https://www.17sucai.com/preview/1424582/2018-11-08/kp/img/3dr_chihiro.png"
+                        alt=""></div>
+                <p>Spirited Away</p>
+
+            </div>
+            <div class="card">
+                <div class="card-bg bg3">
+                </div>
+                <div class="hole"><img
+                        src="https://www.17sucai.com/preview/1424582/2018-11-08/kp/img/3dr_howlcastle.png" alt=""></div>
+                <p>Howl's Moving Castle</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var stage = document.querySelector('.stage')
+        var hole = document.querySelectorAll('.hole')
+        var card = document.querySelectorAll('.card-bg')
+        document.body.onmousemove = function () {
+            var x = event.clientX - stage.offsetLeft - stage.offsetWidth / 2;
+            var y = event.clientY - stage.offsetTop - stage.offsetHeight / 2;
+
+
+            stage.style.transform = 'rotateY(' + x / 40 + 'deg) rotateX(' + y / 20 + 'deg)';
+            hole.forEach(function (e, i) {
+                e.style.transform = ' translateX(' +
+                    -x / 20 + 'px)  translateY(' + -y / 30 + 'px) translateZ(-10px) scale(1)';
+                card[i].style.backgroundPosition = x / 50 + 'px' + ' ' + y / 20 + 'px'
+                card[i].style.transform = 'translateZ(90px)'
+            })
+
+
+
+        }
+    </script>
+</body>
+
+</html>
