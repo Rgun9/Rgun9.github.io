@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <script>
+        // addEventListener("load", function () {
+        //     setTimeout(hideURLbar, 0);
+        // }, false);
+
+        // function hideURLbar() {
+        //     window.scrollTo(0, 1);
+        // }
+    </script>
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- font-awesome icons -->
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+    <!-- //Custom Theme files -->
+    <!-- online-fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
+    <!-- //online-fonts -->
+</head>
+<body>
+    <div class="sidenav">
+		<div class="side_top">
+			<img src="./images/headlog.png" alt="news image" class="img-fluid navimg">
+			<h1> 个人主页 <br>   <span style="font-weight: 600;">项目展示</span></h1>
+		</div>
+		<!-- header -->
+		<header>
+			<div class="container-fluid px-lg-5 ">
+				<nav class="mnu mx-auto">
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop">
+						<ul class="menu">
+							<li class="active"><a href="index.html">Home</a></li>
+							 <li class="mt-sm-3"><a href="#about" class="scroll">关于我</a></li>
+							 <li class="mt-sm-3"><a href="#gallery" class="scroll">静态排版</a></li>
+							<li class="mt-sm-3"><a href="#services" class="scroll">Javascript+Jquery</a></li>
+							<li class="mt-sm-3"><a href="#news" class="scroll">特效和小插件</a></li>
+                            <li class="mt-sm-3"><a href="#contact" class="scroll">Vue</a></li>
+                        </ul>
+				</nav>
+			</div>
+		</header>
+    </div>
+    <div class="main" id="about">
+        <div class="banner-text-w3ls">
+            <div class="container">
+                <div class="mx-auto text-left">
+                    <h2>欢迎访问我的个人主页。
+					<br>welcome </h2>
+					<p class="banp mt-5">下面开始介绍本人各阶段所完成的项目</p>
+				
+                </div>
+            </div>
+        </div>
+		 <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="container py-lg-5">
+           <h3 class="w3_head mb-5">My Projects</h3>
+			 <div class="row news-grids mt-lg-5 mt-4 text-center">
+                <div class="col-md-6 gal-img">
+                    <a href="#gal1"><img src="https://rgun9.github.io/img/farming.png" alt="news image" class="img-fluid"></a>
+                </div>
+                <div class="col-md-6 proj-1 gal-img">
+                    <a href="#gal2"><img src="https://rgun9.github.io/img/bs1.png" alt="news image" class="img-fluid"></a>
+                </div>
+                <div class="col-md-6 mt-5 gal-img">
+                    <a href="#gal3"><img src="https://rgun9.github.io/img/bs2.png" alt="news image" class="img-fluid"></a>
+                </div>
+                <div class="col-md-6 mt-5 gal-img">
+                    <a href="#gal4"><img src="https://rgun9.github.io/img/bs3.png" alt="news image" class="img-fluid"></a>
+                </div>
+            </div>
+        </div>
+        <!-- popup-->
+        <div id="gal1" class="pop-overlay animate">
+            <div class="popup">
+                <img src="https://rgun9.github.io/img/farming.png" alt="Popup Image" class="img-fluid" />
+                <p class="mt-4"><span><a href="https://rgun9.github.io/farming" >戳一下</a></span>    这是一款早期作品,还在大学时刚刚接触前端,然后用了几天时间写了一个完成品！</p>
+                <a class="close" href="#gallery">&times;</a>
+            </div>
+        </div>
+        <!-- //popup -->
+
+        <!-- popup-->
+        <div id="gal2" class="pop-overlay animate">
+            <div class="popup">
+                <img src="https://rgun9.github.io/img/bs1.png" alt="Popup Image" class="img-fluid" />
+                <p class="mt-4"><span><a href="https://rgun9.github.io/bs1" >戳一下</a></span> 在接触Bootstrap后所搭建的静态网站,Bootstrap对于做响应式以及各种样式有着很好的支持,非常适合快速搭建网站</p>
+                <a class="close" href="#gallery">&times;</a>
+            </div>
+        </div>
+        <!-- //popup -->
+        <!-- popup-->
+        <div id="gal3" class="pop-overlay animate">
+            <div class="popup">
+                <img src="https://rgun9.github.io/img/bs2.png" alt="Popup Image" class="img-fluid" />
+                <p class="mt-4"><span><a href="https://rgun9.github.io/bs2" >戳一下</a></span> 在接触Bootstrap后所搭建的静态网站,Bootstrap对于做响应式以及各种样式有着很好的支持,非常适合快速搭建网站</p>
+                <a class="close" href="#gallery">&times;</a>
+            </div>
+        </div>
+        <!-- //popup3 -->
+        <!-- popup-->
+        <div id="gal4" class="pop-overlay animate">
+            <div class="popup">
+                <img src="https://rgun9.github.io/img/bs3.png" alt="Popup Image" class="img-fluid" />
+                <p class="mt-4"><span><a href="https://rgun9.github.io/bs3" >戳一下</a></span> 在接触Bootstrap后所搭建的静态网站,Bootstrap对于做响应式以及各种样式有着很好的支持,非常适合快速搭建网站</p>
+                <a class="close" href="#gallery">&times;</a>
+            </div>
+        </div>
+    </section>
+<!-- services -->
+			<section class="slide-wrapper" id="services">
+                    <div class="services">
+					<h3 class="w3_head mb-5">My Projects</h3>
+					<div class="row service_w3top mt-5">
+                                <div class="col-lg-6">
+                                    <div class="d-flex services-box">
+                                        <div class="icon">
+                                            <span class="fa "><img src="https://rgun9.github.io/img/boll.png" alt=""></span>
+                                        </div>
+                                        <!-- .Icon ends here -->
+                                        <div class="service-content">
+                                            <h4>吃球大作战</h4>
+                                            <p style="color:rgba(0, 0, 0, 0.5)">
+                                                一款当前大火的小游戏,使用到了ES6与canvas编写。
+                                                <p class="mt-4"><span><a href="https://rgun9.github.io/eatboll" >戳一下</a></span></p>
+                                            </p>
+                                        </div>
+                                        <!-- .Service-content ends here -->
+                                    </div>
+                                    <!-- .Services-box ends here -->
+
+                               
+                                    <!-- .Services-box ends here -->
+                                </div>
+                                <!-- .Col ends here -->
+                                <div class="col-lg-6">
+                                    <div class="d-flex services-box">
+                                        <div class="icon">
+                                            <span class="fa "><img src="https://rgun9.github.io/img/plan.png" alt=""></span>
+                                        </div>
+                                        <!-- .Icon ends here -->
+                                        <div class="service-content">
+                                            <h4>微信打飞机小游戏</h4>
+                                            <p style="color:rgba(0, 0, 0, 0.5)">
+                                                通过原生JavaScript编写的一款经典的小游戏！
+                                                <p class="mt-4"><span><a href="https://rgun9.github.io/plan" >戳一下</a></span></p>
+                                            </p>
+                                        </div>
+                                        <!-- .Service-content ends here -->
+                                    </div>
+                                    <!-- .Services-box ends here -->        
+                                    <!-- .Services-box ends here -->
+                                </div>
+                                
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " style="padding: 0;">
+                                    <div class="d-flex services-box text-left" >
+                                        <div class="icon">
+                                            <span class="fa" style="width: 450px;" ><img src="https://rgun9.github.io/img/compare.png" alt=""></span>
+                                        </div>
+                                        <!-- .Icon ends here -->
+                                        <div class="service-content" style="padding-top: 50px;" >
+                                            <h4>比较图</h4>
+                                            <p style="color:rgba(0, 0, 0, 0.5);">
+                                                大多数热门网站都会使用到的一种图形,能凸显强调对比感。
+                                                <p class="mt-4"><span><a href="https://rgun9.github.io/compare" >戳一下</a></span></p>
+                                            </p>
+                                        </div>
+                                        <!-- .Service-content ends here -->
+                                    </div>
+                                </div>
+                                
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 0;">
+                                    <div class="d-flex services-box">
+                                        <div class="icon">
+                                            <span class="fa " style="width: 450px;"><img src="https://rgun9.github.io/img/banner.png" alt=""></span>
+                                        </div>
+                                        <!-- .Icon ends here -->
+                                        <div class="service-content" style="padding-top: 50px;">
+                                            <h4>无缝轮播图</h4>
+                                            <p style="color:rgba(0, 0, 0, 0.5)">
+                                                非常经典的样式，无缝轮播比起传统轮播更有图片的切换感。
+                                                <p class="mt-4"><span><a href="https://rgun9.github.io/banner" >戳一下</a></span></p>
+                                            </p>
+                                        </div>
+                                        <!-- .Service-content ends here -->
+                                    </div>
+                                </div>
+                                
+                                <!-- .Col ends here -->
+                            </div>
+                            <!-- .Row ends here -->
+                        <!-- .Container ends here -->
+                    </div>
+                    <!-- .Services ends here -->
+                </section>
+			<!-- //services -->
+
+		<!-- news -->
+       <div class="news" id="news">
+		<div class="text-left">
+			<h3 class="w3_head mb-5">My Projects</h3>
+		</div>
+			<div class="row news-grids">
+				<div class="col-lg-6 news-grids-left">
+					<div class="news_top">
+						<img src="https://rgun9.github.io/img/loading.png" alt="news image" class="img-fluid">
+						<h4>loading</h4>
+						<p class="newsp">使用CSS3和SVG写的一些loading效果
+                            <p class="mt-4"><span><a href="https://rgun9.github.io/loading" >戳一下</a></span></p>
+                        </p>
+					</div>
+				</div>
+				<div class="col-lg-6 news-grids-middle">
+					<div class="news_top">
+						<img src="https://rgun9.github.io/img/parallax.png" alt="news image" class="img-fluid">
+						<h4>3D立体感的相册</h4>
+						<p class="newsp">通过JS模拟视差感,增强用户体验
+                            <p class="mt-4"><span><a href="https://rgun9.github.io/parallax" >戳一下</a></span></p>
+                        </p>
+					</div>
+				</div>
+				<div class="col-lg-6 news-grids-right">
+					<div class="news_top">
+						<img src="https://rgun9.github.io/img/waterfall.png" alt="news image" class="img-fluid">
+						<h4>瀑布流布局</h4>
+						<p class="newsp">手机端居多的布局方式。
+                            <p class="mt-4"><span><a href="https://rgun9.github.io/waterfall" >戳一下</a></span></p> </p>
+					</div>
+				</div>
+				<div class="col-lg-6 news-grids-right">
+					<div class="news_top">
+						<img src="https://rgun9.github.io/img/audio.png" alt="news image" class="img-fluid">
+						<h4>播放器</h4>
+						<p class="newsp">传统的插件式播放器。
+                            <p class="mt-4"><span><a href="https://rgun9.github.io/audio" >戳一下</a></span></p>
+                        </p>
+					</div>
+				</div>
+		
+			</div>
+		</div>
+<!-- //news -->
+<!-- contact -->
+	 <section class="wedo" id="contact">
+		
+	</section>
+	 <!-- //contact -->
+    </div>
+
+</body>
+
+<script>
+    window.onload=function(){
+        
+    }
+</script>
+</html>
